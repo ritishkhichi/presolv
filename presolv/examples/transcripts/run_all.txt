@@ -1,0 +1,101 @@
+﻿============================================================
+Example 01 ù List calendar (happy path)
+============================================================
+
+USER: What's on my calendar tomorrow?
+ASSISTANT: Here's your schedule for 2025-06-19 (UTC):
+
+- 10:00 ù Team 1:1 (30 min)
+- 14:00 ù Client sync with John Smith (60 min)
+
+============================================================
+Example 02 ù Multi-turn reschedule
+============================================================
+
+USER: Who is my 2pm meeting with tomorrow?
+ASSISTANT: Tomorrow at 2:00 PM UTC you have Client sync with John Smith (60 min). The attendee is John Smith (john.smith@acmecorp.com).
+
+USER: Reschedule it to 4pm.
+ASSISTANT: I can reschedule Client sync with John Smith from 2:00 PM to 4:00 PM UTC tomorrow (2025-06-19). Shall I confirm this change?
+
+USER: Yes, please confirm that change.
+ASSISTANT: Done ù I've scheduled Client sync with John Smith on 2025-06-19 at 16:00 UTC.
+
+============================================================
+Example 03 ù Calculator (no calendar/CRM)
+============================================================
+
+USER: How many minutes between 9:00 and 17:30?
+ASSISTANT: The result is 510.0 minutes.
+
+============================================================
+Example 04 ù Calendar 500 error (2025-06-20)
+============================================================
+
+USER: Am I free on June 20th at 2pm for a 30-minute meeting?
+ASSISTANT: I'm sorry ù the calendar service is temporarily unavailable (server error). I wasn't able to check your availability on June 20th. Please try again later or choose a different date.
+
+============================================================
+Example 05 ù Ambiguous Sarah
+============================================================
+
+USER: I'd like to schedule time with Sarah.
+ASSISTANT: I found multiple contacts named Sarah. Which one did you mean?
+
+- Sarah Chen (sarah.chen@techstart.io) at TechStart
+- Sarah Patel (sarah.patel@globalinc.com) at Global Inc
+
+Please let me know which Sarah you'd like to meet with.
+
+============================================================
+Example 06 ù Wrong-tool recovery (miles to km)
+============================================================
+
+USER: Convert 50 miles to kilometers.
+ASSISTANT: The result is 80.467 km.
+
+============================================================
+Example 07 ù No tool (capabilities question)
+============================================================
+
+USER: What can you help me with?
+ASSISTANT: I'm your executive scheduling assistant. I can:
+- List or check your calendar
+- Look up contacts in the CRM
+- Run quick calculations and unit conversions
+
+I'll always confirm details before booking a new meeting.
+
+============================================================
+Example 08 ù CRM NOT_FOUND
+============================================================
+
+USER: Look up nobody@corp.com
+ASSISTANT: I couldn't find a contact matching 'nobody@corp.com'. Please check the spelling or try a different email address.
+
+
+>>> Running example_01_list_calendar.py
+
+
+>>> Running example_02_multiturn_booking.py
+
+
+>>> Running example_03_calculator.py
+
+
+>>> Running example_04_calendar_500.py
+
+
+>>> Running example_05_ambiguous_sarah.py
+
+
+>>> Running example_06_wrong_tool_recovery.py
+
+
+>>> Running example_07_no_tool.py
+
+
+>>> Running example_08_not_found.py
+
+
+>>> All examples completed.
