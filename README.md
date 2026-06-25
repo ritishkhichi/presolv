@@ -4,7 +4,7 @@ Executive scheduling assistant with Gemini tool calling — calendar, CRM, and c
 
 ## Setup
 
-Python 3.9+ recommended (3.11+ ideal). Mock tools run locally without an API key.
+Python 3.12+. Mock tools run locally without an API key.
 
 ```bash
 python -m venv .venv
